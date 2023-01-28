@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <label> Escolha uma opção </label>
+<!-- definindo as opções -->
+<select id = "opcao">
+    <option value="valor 1"> valor 1 </option>
+    <option value="valor 2"> valor 2 </option>
+    <option value="valor 3"> valor 3 </option>
+</select>
+
+<!-- parágrafo que vai receber o texto -->
+<p></p>
+
+<!-- parte do javascript -->
+<script>
+    // querySelector() busca o objeto html dentro do documento. nesse caso buscando o select
+    // definie a constante como o select
+    const select = document.querySelector('select');
+    // é responsável por atribuir o texto ao parágrafo
+    const paragrafo = document.querySelector('p');
+    select.onchange = setOpcao;
+
+    function setOpcao() {
+        // pega o valor escolhido no select
+        const escolha = select.value;
+        switch (escolha) {
+            case 'valor 1':
+                paragrafo.textContent = 'você escolheu a opção um';
+                break;
+            case 'valor 2':
+                paragrafo.textContent = 'você escolheu a opção 2';
+                break;
+            case 'valor 3':
+                paragrafo.textContent = 'você escolheu a opção 3';
+                break;
+            default:
+                paragrafo.textContent = 'indefinido';
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>
