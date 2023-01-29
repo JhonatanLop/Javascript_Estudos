@@ -88,6 +88,11 @@ x = 21
 > 1. minhaidade != minhaIdade
 javascript é uma linguágem casesensitive. isso é, sensível a letras maiúsculase minúsculas.<br>
 
+* Também é possível iniciar uma variável usando "$" e "_"
+
+> $nome - Correto
+> _nome - Correto
+
 ## Boas práticas
 
 * Reduza o uso de variáveis globais.<br>
@@ -135,4 +140,77 @@ let meuNumero = "342343";
 typeof(meuNumero); //String
 ```
 
-O tipo de dado armazenado na variável é retornado como String.  
+O tipo de dado armazenado na variável é retornado como String.
+
+## declarando variáveis com um input em html
+
+Tem um simples comando que pode ser usado como input<br>
+Ele abre uma caixa flutuante na tela com um campo à ser digitado<br>
+
+```html
+    <script>
+        var nome = prompt("me descreva teu nome");
+    </script>
+```
+
+## Conversão de tipo de variável
+
+Para converter o tipo de uma variável usa-se a função ```parse```<br>
+Exemplo<br>
+
+```javascript
+var n1 = prompt("me informe o primeiro número");
+// convertendo para inteiro
+var n1 = parseInt(n1);
+// fazendo conversão direta no input
+var n2 = parseInt(prompt("me informe o segundo número"));
+```
+
+Uma outra forma de fazer conversão para tipos numericos é usando ```number(n)```<br>
+Dessa forma ele identifica sozinho o tipo da variável, se será int ou Float.<br>
+Exemplo
+
+```javascript
+var n1 = number(prompt("me informe o primeiro número"));
+var n2 = number(prompt("me informe o segundo número"));
+```
+
+É possível converter numérico para texto de duas formas<br>
+
+```javascript
+var n1 = 42;
+
+n1.toString();
+String(n1);
+```
+
+## Formatação de String
+
+Dá pra montar frases concatenando strings de 2 jeitos<br>
+
+```javascript
+var nome = "Jhow";
+var idade = 15;
+
+"O estudante " + nome + " tem " + idade + " anos";
+`O estudante ${nome} tem ${idade} anos`;
+```
+
+> Na primeira forma fazendo uma concatenação usando +<br>
+> Na segunda forma fazendo uma substituição direta usando ${}<br>
+
+Também é possível saber o tamanho da Strinhg utilizando o método .length (sem os parenteses)<br>
+
+```javascript
+var texto = "jfaçslkdjfaskdjfhpqdjfopqiwejropqwiejpoiejfckacnvasldfdfaçlkdsjfakd";
+texto.length; // 67 caracteres
+```
+
+É possível transformar a String inteira em letras minúsculas ou maiúsculas<br>
+
+```javascript
+var texto = "Hoje eu estou BEM";
+
+texto.toUpperCase(); // HOJE EU ESTOU BEM
+texto.toLowerCase(); // hoje eu estou bem
+```
