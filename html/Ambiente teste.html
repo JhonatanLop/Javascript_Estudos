@@ -20,14 +20,18 @@
 
     <h1>Hello world</h1>
 
-    <p>Este é um teste com input em javascript</p>
+    <p id="paragrafo"></p>
 
     <script>
-        var n1 = Number(prompt("me informe o primeiro número"));
-        var n2 = Number(prompt("me informe o segundo número"));
-        var resultado = n1 + n2;
-
-        alert("o resultado é " + resultado);
+        let texto = "";
+        let i = 0;
+        for (let i = 0; i < 10; i++) {
+            // se i for igual à 5, continue
+            if (i === 5) {continue;}
+            console.log(i);
+            texto += "O número é: " + i + "<br>";
+            document.getElementById("paragrafo").innerHTML = texto;
+        }
     </script>
 </body>
 </html>

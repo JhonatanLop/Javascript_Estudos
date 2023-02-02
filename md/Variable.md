@@ -214,3 +214,34 @@ var texto = "Hoje eu estou BEM";
 texto.toUpperCase(); // HOJE EU ESTOU BEM
 texto.toLowerCase(); // hoje eu estou bem
 ```
+
+## Interação entre Javascript e HTML
+
+* Salva em uma constante o valor do primeiro ```<select>``` que aparece no documento html
+
+```javascript
+const select = document.querySelector('select');
+```
+> Pode ser aplicado de outras maneiras sem precisar ser atribuido à uma constante
+> A palavra document sempre vai se referir ao arquivo html
+
+* Salva em uma constante o valor de um elemento pelo id
+
+```html
+<input id = "texto">
+<script>
+    const input = document.getElementById("texto")
+</script>
+```
+
+> Novamente, pode ser usado de outras maneiras sem precisar ser atribuído à uma constante
+Supondo que você tenha uma variável e gostaria de concatena-la à um texto dentro do html
+
+```html
+    <h1> Título </h1>
+    <p id = "texto"> este é meu texto </p>
+<script>
+    var texto = "este é o acréscimo";
+    document.getElementById("texto").innerHTML = texto;
+</script>
+```
