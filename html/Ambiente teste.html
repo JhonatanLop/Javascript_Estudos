@@ -23,15 +23,26 @@
     <p id="paragrafo"></p>
 
     <script>
-        let texto = "";
-        let i = 0;
-        for (let i = 0; i < 10; i++) {
+        //let texto = "";
+        //let i = 0;
+        //for (let i = 0; i < 10; i++) {
             // se i for igual à 5, continue
-            if (i === 5) {continue;}
-            console.log(i);
-            texto += "O número é: " + i + "<br>";
-            document.getElementById("paragrafo").innerHTML = texto;
-        }
+            //if (i === 5) {continue;}
+            //console.log(i);
+            //texto += "O número é: " + i + "<br>";
+           // document.getElementById("paragrafo").innerHTML = texto;
+        //}
+        
+        //var num1 = prompt("digite o valor 1"); //5
+        //var num2 = prompt("digite o valor 2"); //10
+        //var numTotal = num1 + num2;
+        //alert(`O valor da soma é: ${numTotal}`) //510
+
+        var num1 = parseFloat(prompt("me informe o primeiro número"));//5
+        var num2 = parseFloat(prompt("me informe o segundo número"));//10
+        var numTotal = num1 + num2;
+        alert(`O valor da soma é: ${numTotal}`) //15
+    
     </script>
 </body>
 </html>

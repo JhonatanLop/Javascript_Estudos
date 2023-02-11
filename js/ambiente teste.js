@@ -91,3 +91,19 @@ for (let i = 0; i < 10; i++) {
     texto += "O número é: " + i + "<br>";
     document.getElementById("paragrafo").innerHTML = texto;
 }
+
+// Testando soma com concatenação de string
+    var num1 = prompt("me informe o primeiro número");//5
+    var num2 = prompt("me informe o segundo número");//10
+    //convertendo para números inteiros
+    num1 = parseInt(num1)
+    num2 = parseInt(num2);
+    var numTotal = num1 + num2;
+    alert(`O valor da soma é: ${numTotal}`) //15
+
+
+// convertendo diretamente para numerico identificando automaticamente inteiro ou float
+    var num1 = Number(prompt("me informe o primeiro número"));//5
+    var num2 = Number(prompt("me informe o segundo número"));//10
+    var numTotal = num1 + num2;
+    alert(`O valor da soma é: ${numTotal}`) //15
