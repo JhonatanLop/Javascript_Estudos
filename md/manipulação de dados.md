@@ -20,6 +20,7 @@ dessa forma, será aberto uma caixa de texto para input do dado
 
 ## Exibir dados
 
+> tag's: print, printar, exibir mostrar
 para fazer um "print" de um dado ou uma variável, seque o comando:<br>
 
 * Em javascript puro
@@ -33,8 +34,16 @@ console.log(nome);
 
 ```html
 <script>
-    var nome = prompt("Hello, tell me youre name");
+    var nome = prompt("Hello, tell me youre name"); // abrindo pop-up
     alert(nome);
+</script>
+```
+
+Escrevendo dentro do documento html
+```html
+<script>
+    var nome = prompt("digite seu nome");
+    document.write(`<h2>Seu nome tem ${nome.length} letras`)
 </script>
 ```
 
@@ -185,8 +194,97 @@ Na dúvida de que tipo de dado numérico será inserido, tem a função de conve
     var num1 = Number(prompt("me informe o primeiro número"));//5
     var num2 = Number(prompt("me informe o segundo número"));//10
     var numTotal = num1 + num2;
-    alert(`O valor da soma é: ${numTotal}`) //15
+    alert(`O valor da soma é: ${numTotal}`); //15
 </script>
 ```
 
-* Manipulação de Strings
+## Manipulação de Strings
+
+* Interpolação
+
+```javascript
+var nome = "Jhow"
+console.log("Olá " + nome + ", tudo bem com você?"); // olá jhow, tudo bem com você?
+console.log(`Olá ${jhow}, tudo bem com você?`); // olá jhow, tudo bem com você?
+```
+
+Dá pra ver que são estruturas diferentes que levam á um mesmo resultado<br>
+Porém, usando o método **template strings**, código fica mais organizado e compacto<br>
+
+Método template strings
+
+```javascript
+console.log(`Olá ${variavel}, tudo bem com você?`);
+```
+
+### Formatando String
+
+1. Tamanho da String
+
+Existe um método chamado length dentro do javascript.<br>
+> length == tamanho no português<br>
+Ele permite você saber a quantidade de caracteres de uma string<br>
+
+```javascript
+var nome = "javascript";
+nome.length // 10;
+```
+
+2. Formatar em letras maiúsculas/minúsculas
+
+Existe uma função que permite você alterar os caracteres de uma string<br>
+
+formatando em letras maiúsculas:
+
+```javascript
+var nome = "javascript";
+nome.toUpperCase() // JAVASCRIPT
+```
+
+Formatando em minúsculas
+
+```javascript
+var nome = "JHONATAN WICK";;
+nome.toLowerCase(); // jhonatan wick
+```
+
+## Formatação de números
+
+supondo que voçê tenha difinido um número
+
+```javascript
+var n1 = 1945.2;
+```
+
+o número decimal exibido não possui 2 casas decimais, mas podemos forçar isso
+
+```javascript
+var n1 = 1945.2;
+n1.toFixed(2); // 1945.20
+```
+Assim conseguimos forçar duas casas decimais
+> a quantidade de casa é definida dentro dos parênteses da função ```toFixed()```
+
+Também é possível trocar o separador "." (ponto) por "," (virgula).
+Usando o seguinte método:
+
+```javascript
+var n1 = 1945.2;
+n1.toFixed(2).replace('.', ','); // 1945,20
+```
+
+A função ```replace()``` usa 2 parâmetros.<br>
+O primeiro é o que será substituído<br>
+O segundo é o que irá substituir<br>
+
+```javascript
+variavel.replace(parametro1, parametro2);
+```
+
+### Comando para formatar em moeda
+
+```javascript
+n1 = 1945.2;
+// formatando no estilo de moeda brasileira
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // R$ 1,945.20
+```

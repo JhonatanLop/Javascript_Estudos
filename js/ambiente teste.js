@@ -107,3 +107,27 @@ for (let i = 0; i < 10; i++) {
     var num2 = Number(prompt("me informe o segundo número"));//10
     var numTotal = num1 + num2;
     alert(`O valor da soma é: ${numTotal}`) //15
+
+// formatação de strings
+    var nome = "Jhow"
+    console.log("Olá " + nome + ", tudo bem com você?"); // olá jhow, tudo bem com você?
+    console.log(`Olá ${jhow}, tudo bem com você?`); // olá jhow, tudo bem com você?
+
+// usando length
+    var nome = "javascript";
+    nome.length // 10;
+
+// teste com upper e lower case
+    var nome = "javascript";
+    nome.toUpperCase() // JAVASCRIPT
+
+    var nome = "JHONATAN WICK";;
+    nome.toLowerCase(); // jhonatan wick
+
+// escrevendo no documento html
+    var nome = prompt("digite seu nome");
+    document.write(`<h2>Seu nome tem ${nome.length} letras`);
+
+// formatação de números
+    var n1 = 1945.2;
+    n1.toFixed(2).replace('.', ','); // 1945,20
