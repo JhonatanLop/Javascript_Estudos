@@ -43,9 +43,16 @@
         //var numTotal = num1 + num2;
         //alert(`O valor da soma é: ${numTotal}`) //15
     
-        var nome = prompt("digite seu nome");
-        document.write(`<h2>Seu nome tem ${nome.length} letras`);
+        //var nome = prompt("digite seu nome");
+        //document.write(`<h2>Seu nome tem ${nome.length} letras`);
+        
+        var texto = "";
+        var lista = [1,2,3,4,5,6,7,8,9]
+        for (let i = 0; i < lista.length; i++) {
+            texto += lista[i] + "<br>";
+        }
 
+        document.getElementById("paragrafo").innerHTML = texto
     </script>
 </body>
 </html>

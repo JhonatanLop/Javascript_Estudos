@@ -117,7 +117,7 @@ Operadores suportados no javascript:<br>
 |-|subtração|1 - 1 = 0|
 |*|multiplicação|2 * 3 = 6|
 |/|divisão|6 / 3 = 2|
-|%|resto da divisão|5 % 2 = 2.5|
+|%|resto da divisão|5 % 2 = 1|
 |++|incremento|++x ou x++ almentando valor de x em 1|
 |--|decremento|--X ou x-- decrementando valor de x em 1|
 |**|exponenciação|3** = 9|
@@ -249,6 +249,7 @@ nome.toLowerCase(); // jhonatan wick
 ```
 
 ## Formatação de números
+> tag's: decimal, formatação, por vírgula
 
 supondo que voçê tenha difinido um número
 
@@ -286,5 +287,113 @@ variavel.replace(parametro1, parametro2);
 ```javascript
 n1 = 1945.2;
 // formatando no estilo de moeda brasileira
-n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // R$ 1,945.20
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}); // R$ 1,945.20
 ```
+
+# Array
+> tag's: lista, vetores Array
+
+Array é um tipo de dado que consegue armazenar várias informações ao mesmo tempo<br>
+Comumente conhecida como "lista", também podendo ser chamada de "vetor"<br>
+
+Uma vantagem em usar listas é a sua capacidade de armazenar várias informações<br>
+
+Como se representa uma lista dentro de um código javascript?
+
+```javascript
+var lista = [];
+```
+
+A lista é representada por "[]"<br>
+No exemplo anterior ela está sendo inicializada vazia, mas podemos adicionar ítens separados por ","
+
+```javascript
+var lista = [
+"jhonatan", // indice 0
+"sebastian", // indice 1
+"ellie", // indice 2
+"rafaela"]; // indice 3
+```
+
+É possível acessar um iten de uma lista pelo indice<br>
+
+```javascript
+var lista = [
+"jhonatan",
+"sebastian",
+"ellie",
+"rafaela"];
+
+lista[0]; // "jhonatan"
+```
+
+Colocando o nome da lista seguido de colchetes "[]" com o indice dentro<br>
+
+Cada item dentro da lista corresponde à um indice com o primeiro sendo sempre 0<br>
+Para saber qual é o tamanho de uma lista podemos usar o mesmo método para manipulação de String, o `length`
+
+```javascript
+var lista = ["jhonatan","sebastian","ellie","rafaela"];
+lista.length; // 4
+```
+
+Usando indice, é possível alterar o dado que está armazenado na lista<br>
+Por exemplo
+
+```javascript
+var lista = ["jhonatan","sebastian","ellie","rafaela"];
+lista[0] = "pedro";
+```
+
+Dessa forma, o primeiro iten da lista será substituído pelo valor "pedro"<br>
+Tem como adicionar itens numa lista sem precisar substituir nenhum outro usando duas funções<br>
+
+* push
+
+```javascript
+var lista = ["valor", "valor 2", "valor 3"];
+lista.push("valor 1");
+//lista = ["valor", "valor 2", "valor 3", "valor 1"];
+```
+
+A função ```push()``` adiciona itens no final da lista
+
+* unshift
+
+```javascript
+var lista = ["valor", "valor 2", "valor 3"];
+lista.unshift("valor 1");
+//lista = ["valor 1", "valor", "valor 2", "valor 3"];
+```
+
+A função ```unshift``` adiciona intes no começo da lista<br>
+<br>
+Também é possível REMOVER elementos em uma lista<br>
+
+* pop
+
+```javascript
+lista.pop();
+```
+
+Remove o último iten da lista<br>
+
+* shift
+
+```javascript
+lista.shift();
+```
+
+Remove o primeiro iten da lista<br>
+
+É possível acessar todos os itens da sua lista e exibilos separadamente usando uma estrutura de repetição<br>
+
+```javascript
+var lista = [1,2,3,4,5,6,7,8,9]
+for (let i = 0; i < lista.length; i++) {
+    const element = lista[i];
+    console.log(element);
+}
+```
+
+O resultado será uma sequência de 1 à 9

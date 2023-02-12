@@ -131,3 +131,10 @@ for (let i = 0; i < 10; i++) {
 // formatação de números
     var n1 = 1945.2;
     n1.toFixed(2).replace('.', ','); // 1945,20
+
+// acessando elementos dentro de uma lista
+    var lista = [1,2,3,4,5,6,7,8,9]
+    for (let i = 0; i < lista.length; i++) {
+        const element = lista[i];
+        console.log(element);
+    }
