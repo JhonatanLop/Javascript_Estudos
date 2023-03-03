@@ -163,7 +163,7 @@ Adicionando um evendo para quando o mouse entrar e sair na area da div<br>
         a.innerText = 'Saiu!';
     }
 </script>
-´´´
+```
 
 Uma forma de adicionar esses eventos fora do html, para deixar o código mais limpo<br>
 é adicionando diretamente no javascript<br>
