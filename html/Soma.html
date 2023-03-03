@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Simples de Soma</title>
+</head>
+<body>
+    <!-- definindo os inputs -->
+    <input type="numer" name="numero1" id="n1"> +
+    <input type="numer" name="numero2" id="n2">
+    <!-- definindo o botão com o evento onclick -->
+    <button onclick="somar()">Somar</button>
+    <div id="rest">Resultado</div>
+    <script>
+        // criando função.. é importante lembrar que toda a operação deva estar dentro da função
+        function somar(numero1, numero2){
+            // importando
+            var n1 = document.getElementById("n1");
+            var n2 = document.querySelector("input#n2");
+            var result = document.getElementById("rest");
+            // convertendo
+            var numero1 = Number(n1.value);
+            var numero2 = Number(n2.value);
+            // fazendo o calculo
+            var resultado = numero1 + numero2;
+            // transferindo o resultado para o html
+            result.innerHTML = `A soma entre ${numero1} e ${numero2} é de: ${resultado}`;
+        }
+    </script>
+</body>
+</html>

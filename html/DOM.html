@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #3c3ceb;
+            color: wheat;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Iniciando estudos DOM
+    </h1>
+    <p>Aqui vai o resultado</p>
+    <p id="msg">Aprendendo a usar <strong>DOM</strong> em Javascript</p>
+    <div name="oi">Clique em mim</div>
+
+    <script>
+        window.document.write("Hello World");
+        window.document.write(window.document.URL);
+
+        var t1 = document.getElementById("msg");
+        t1.style.background = "green";
+
+        //var d = document.getElementsByClassName("click");
+        //d.style.background = "green";
+
+        var q = document.querySelector('p#msg');
+        q.style.color = 'black';
+        </script>
+</body>
+</html>
