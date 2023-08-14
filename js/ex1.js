@@ -1,0 +1,1 @@
+console.log("A extensão funciona kkkk");
